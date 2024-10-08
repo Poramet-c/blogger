@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+nav {
+    font-family: 'Chonburi';
+    background-color: #000000;
+    box-shadow: #8d8d8d 1px 5px ;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav a {
+    font-size: 14pt;
+}
+
+nav div {
+    font-size: 24pt;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    /* font-size: 24px; */
+    text-align: center;
+    flex-grow: 1;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.nav-link:hover {
+    box-shadow: white;
+}
+
+.article-previews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+.article-card {
+    position: relative; /* Make positioning relative for the overlay */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: hidden; /* Prevent overflow from the overlay */
+    color: white; /* Change text color for contrast */
+    transition: all 0.3s ease; /* Smooth transition for scale */
+}
+
+.article-card::before {
+    content: ''; /* Add a pseudo-element for background */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Fill the card */
+    left: 0; /* Fill the card */
+    right: 0; /* Fill the card */
+    bottom: 0; /* Fill the card */
+    background-image: url('image1.jpg'); /* Set your background image here */
+    background-size: cover; /* Make background image cover the card */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply blur effect to the background */
+    z-index: 0; /* Place it behind the text */
+}
+
+.article-card:nth-child(1)::before {
+    background-image: url('image1.jpg'); /* Image for first card */
+}
+
+.article-card:nth-child(2)::before {
+    background-image: url('image2.jpg'); /* Image for second card */
+}
+
+.article-card:nth-child(3)::before {
+    background-image: url('image3.jpg'); /* Image for third card */
+}
+
+.article-card:nth-child(4)::before {
+    background-image: url('image4.jpg'); /* Image for fourth card */
+}
+
+.article-card h2, .article-card p {
+    position: relative; /* Make text position relative to appear above the overlay */
+    z-index: 1; /* Bring text above the overlay */
+}
+
+.article-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.article-card h2 {
+    font-size: 22px; /* Slightly larger font size */
+    margin: 0 0 10px; /* Margin below the title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for better contrast */
+}
+
+.article-card a {
+    color: #ffd700; /* Gold color for links */
+    text-decoration: none; /* Remove underline */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 0 10px; /* Padding around the link */
+    /* margin: 6px; */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.article-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+main {
+    padding: 16px;
+}
+
+h1 {
+    text-align: center; /* Center the main title */
+    font-size: 36px; /* Larger font size for visibility */
+    margin: 20px 0; /* Margin for spacing */
+    color: #333; /* Color of the title */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.intro-text {
+    text-align: center; /* Center the introduction text */
+    font-size: 18px; /* Font size for readability */
+    color: #555; /* Darker color for text */
+    margin: 0 20px 40px; /* Margin for spacing */
+    line-height: 1.6; /* Increase line height for better readability */
+}

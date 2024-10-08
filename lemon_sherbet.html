@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU GOT ME!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('egg.jpg');
+            background-size: cover; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white; 
+            font-family: Arial, sans-serif;
+            position: relative; 
+            text-align: center; 
+        }
+
+        #easter-egg-area {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        #hidden-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            cursor: pointer;
+            margin-top: 20px; 
+        }
+
+        #user-input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 15px; 
+            border: none;
+            border-radius: 5px; 
+        }
+
+    </style>
+</head>
+<body>
+    <div id="easter-egg-area">
+        <h1>I'm Seventeen and I am crazy.</h1>
+        <input type="text" id="user-input" placeholder="Enter the code..." />
+        <button id="hidden-button" onclick="checkInput()">Submit</button> <!-- Submit button -->
+    </div>
+
+    <script>
+        function checkInput() {
+            const userInput = document.getElementById('user-input').value;
+            /* YOU ARE READING THIS? CLEVER */
+            if (userInput === '451') {
+                alert('🥚🎉');
+            } else {
+                alert('Try again!'); // Alert for incorrect input
+            }
+        }
+    </script>
+</body>
+</html>
